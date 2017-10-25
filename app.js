@@ -11,7 +11,7 @@ var session = require('express-session');
 var app = express();
 
 // Connect with Mongo DB
-mongoose.connect('mongodb://localhost/node-template');
+mongoose.connect('mongodb://localhost/');
 
 // Init middel-ware
 app.use(cookieParser());
@@ -39,6 +39,5 @@ require('./routes/routes')(app, passport);
 
 // listen
 app.listen( 3000, function(){
-    console.log('lisning on port 3000');
+    console.log('listening on port 3000');
 });
-
